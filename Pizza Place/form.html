@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--METADATA-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Order Pizza">
+<meta name=" robots" content=" noindex, nofollow">
+<title>Pizza Order Form</title>
+<!--These are the links to the fonts that I have added-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="element">
+
+    <!-- Header Section -->
+  <header class="pizza">
+    <div class="place">
+    <h1> Welcome to Pizza Place </h1>
+    </div>
+
+    <!-- tagline for pizza place is added here-->
+    <div class="tagline">
+      <h2> -Delicious Pizza at Your Doorstep- </h2>
+    </div>
+  </header>
+  
+  <nav> <!-- Navigation links are added to navigate through home, menu, comtact-->
+    <a href="index.html">Home </a>
+    <a href="form.html">Menu </a>
+    <a href="index.html">Contact </a>
+  </nav>
+
+ <div class=heading> <h2>Pizza Order Form</h2> </div> <!-- Heading for my form is added here.-->
+  <form action="/submit_order" method="post">
+    <!-- Text input -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <!-- Email input -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- Number input -->
+    <div class="phone">
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone"  required>
+  </div>
+
+    <!-- Radio input -->
+    <label>Choose Pizza Size:</label>
+    <div>
+      <input type="radio" id="small" name="size" value="small" required>
+      <label for="small">Small</label>
+    </div>
+    <div>
+      <input type="radio" id="medium" name="size" value="medium" required>
+      <label for="medium">Medium</label>
+    </div>
+    <div>
+      <input type="radio" id="large" name="size" value="large" required>
+      <label for="large">Large</label>
+    </div>
+
+    <!-- Checkbox input -->
+    <label>Choose Toppings:</label>
+    <div>
+      <input type="checkbox" id="pepperoni" name="toppings[]" value="pepperoni">
+      <label for="pepperoni">Pepperoni</label>
+    </div>
+    <div>
+      <input type="checkbox" id="mushrooms" name="toppings[]" value="mushrooms">
+      <label for="mushrooms">Mushrooms</label>
+    </div>
+    <div>
+      <input type="checkbox" id="onions" name="toppings[]" value="onions">
+      <label for="onions">Onions</label>
+    </div>
+    <div>
+      <input type="checkbox" id="redpepper" name="toppings[]" value="redpepper">
+      <label for="onions"> Red Pepper </label>
+    </div>
+
+    <!-- Select input -->
+    <label for="crust">Choose Crust:</label>
+    <select id="crust" name="crust" required size="1">
+      <option value="" selected disabled>Thin Crust</option>
+      <option value="thick">Thick Crust</option>
+      <option value="stuffed">Stuffed Crust</option>
+    </select>
+
+    <!-- Submit button -->
+    <button type="submit">Place Order</button>
+  </form>
+
+   
+ <!-- Footer Section-->
+ <footer> 
+  <p> &copy; 2023 Pizza Place. All rights reserved.</p>
+ </footer>
+</body>
+</html>
